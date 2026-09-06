@@ -5,7 +5,7 @@ Proyek Java sederhana untuk memenuhi **Tugas Minggu Ke-2 Pemrograman Berorientas
 ## Fitur
 
 - Mengelompokkan buku berdasarkan genre.
-- Menghubungkan buku ke genre secara otomatis saat objek buku dibuat.
+- Menghubungkan buku dan memasukkannya ke daftar genre yang sesuai.
 - Menampilkan daftar dan informasi buku.
 - Meminjam serta mengembalikan buku melalui member.
 - Memeriksa ketersediaan buku sebelum dipinjam.

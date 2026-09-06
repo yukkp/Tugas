@@ -9,11 +9,6 @@ public class Buku {
         this.judul = judul;
         this.genre = genre;
         this.dipinjam = false;
-
-        // Otomatis memasukkan buku ke daftar buku pada genre yang dipilih.
-        if (genre != null) {
-            genre.tambahBukuKeGenre(this);
-        }
     }
 
     public String getJudul() {

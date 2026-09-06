@@ -9,6 +9,11 @@ public class Main {
         Buku buku2 = new Buku("978-02", "Struktur Data", gTekno);
         Buku buku3 = new Buku("978-03", "Dune", gFiksi);
 
+        // Memasukkan setiap buku ke daftar genre yang sesuai.
+        gTekno.tambahBukuKeGenre(buku1);
+        gTekno.tambahBukuKeGenre(buku2);
+        gFiksi.tambahBukuKeGenre(buku3);
+
         // Menampilkan daftar buku berdasarkan genre.
         gTekno.tampilkanDaftarBuku();
         System.out.println();

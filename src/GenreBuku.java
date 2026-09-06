@@ -2,9 +2,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class GenreBuku {
-    private String kodeGenre;
-    private String namaGenre;
-    private List<Buku> daftarBuku; // Menyimpan daftar buku dalam genre ini
+    private final String kodeGenre;
+    private final String namaGenre;
+    private final List<Buku> daftarBuku;
 
     public GenreBuku(String kodeGenre, String namaGenre) {
         this.kodeGenre = kodeGenre;
@@ -16,18 +16,18 @@ public class GenreBuku {
         return namaGenre;
     }
 
-    // Method mandiri untuk mengelola koleksi buku per genre
     public void tambahBukuKeGenre(Buku buku) {
         daftarBuku.add(buku);
     }
 
     public void tampilkanDaftarBuku() {
-        System.out.println("=== Kategori Genre: " + namaGenre + " ===");
+        System.out.println("=== Genre " + kodeGenre + ": " + namaGenre + " ===");
+
         if (daftarBuku.isEmpty()) {
             System.out.println("(Belum ada buku di genre ini)");
         } else {
-            for (Buku b : daftarBuku) {
-                System.out.println("- " + b.getJudul());
+            for (Buku buku : daftarBuku) {
+                System.out.println("- " + buku.getJudul());
             }
         }
     }

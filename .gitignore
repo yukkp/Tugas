@@ -1,0 +1,7 @@
+# Hasil kompilasi Java
+bin/
+*.class
+
+# Berkas khusus sistem operasi
+.DS_Store
+Thumbs.db

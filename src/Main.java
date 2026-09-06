@@ -1,19 +1,25 @@
 public class Main {
     public static void main(String[] args) {
-        // 1. Inisialisasi Entitas GenreBuku secara independen/mandiri
+        // Membuat objek genre.
         GenreBuku gTekno = new GenreBuku("G01", "Teknologi");
         GenreBuku gFiksi = new GenreBuku("G02", "Sains Fiksi");
 
-        // 2. Inisialisasi Buku yang dihubungkan ke GenreBuku
+        // Membuat objek buku yang terhubung dengan genre.
         Buku buku1 = new Buku("978-01", "Pemrograman Java", gTekno);
         Buku buku2 = new Buku("978-02", "Struktur Data", gTekno);
         Buku buku3 = new Buku("978-03", "Dune", gFiksi);
 
-        // 3. Menampilkan daftar buku langsung melalui Entitas GenreBuku
+        // Menampilkan daftar buku berdasarkan genre.
         gTekno.tampilkanDaftarBuku();
         System.out.println();
         gFiksi.tampilkanDaftarBuku();
 
+        System.out.println("\n=== INFORMASI BUKU ===");
+        buku1.tampilkanInfo();
+        buku2.tampilkanInfo();
+        buku3.tampilkanInfo();
+
+        // Menunjukkan relasi Member dengan Buku.
         System.out.println("\n=== TRANSAKSI MEMBER ===");
         Member mhs1 = new Member("J04001", "Haka");
         mhs1.pinjamBuku(buku1);

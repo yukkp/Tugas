@@ -1,7 +1,7 @@
 public class Buku {
-    private String isbn;
-    private String judul;
-    private GenreBuku genre;
+    private final String isbn;
+    private final String judul;
+    private final GenreBuku genre;
     private boolean dipinjam;
 
     public Buku(String isbn, String judul, GenreBuku genre) {
@@ -9,8 +9,8 @@ public class Buku {
         this.judul = judul;
         this.genre = genre;
         this.dipinjam = false;
-        
-        // Otomatis menautkan buku ke entitas GenreBuku saat dibuat
+
+        // Otomatis memasukkan buku ke daftar buku pada genre yang dipilih.
         if (genre != null) {
             genre.tambahBukuKeGenre(this);
         }
@@ -29,7 +29,7 @@ public class Buku {
     }
 
     public void tampilkanInfo() {
-        String namaG = (genre != null) ? genre.getNamaGenre() : "Tanpa Genre";
-        System.out.println("- [" + isbn + "] " + judul + " | Genre: " + namaG);
+        String namaGenre = (genre != null) ? genre.getNamaGenre() : "Tanpa Genre";
+        System.out.println("- [" + isbn + "] " + judul + " | Genre: " + namaGenre);
     }
 }
